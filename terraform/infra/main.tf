@@ -47,10 +47,10 @@ resource "github_repository_deploy_key" "blem_staging" {
 # Create a web server
 # Create a new Web Droplet in the nyc2 region
 resource "digitalocean_droplet" "web" {
-  image     = "ubuntu-24-10-x64"
+  image     = "ubuntu-24-04-x64"
   name      = "staging-blem-dev"
   region    = "sgp1"
-  size      = "s-2vcpu-2gb-amd"
+  size      = "s-2vcpu-2gb"
   user_data = <<EOF
 #!/bin/bash
 
